@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Report App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">☀️</div>
+      <div>
+        <h1>Weather Report</h1>
+        <p class="subtitle">Check the weather anywhere</p>
+      </div>
+    </header>
+
+    <form id="search-form" class="search">
+      <label class="sr-only" for="city-input">City name</label>
+      <input id="city-input" type="text" placeholder="Enter city name (e.g. Kurnool)" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="message" class="message" role="status">Search for a city to see its weather.</p>
+
+    <section id="weather-card" class="weather-card" hidden>
+      <div class="location-row">
+        <div>
+          <h2 id="city-name">City</h2>
+          <p id="date-text" class="muted"></p>
+        </div>
+        <span id="weather-icon" class="weather-icon" aria-hidden="true">🌤️</span>
+      </div>
+      <p id="condition" class="condition">Weather condition</p>
+      <div class="temperature"><span id="temperature">--</span><span>°C</span></div>
+      <p id="feels-like" class="muted">Feels like --°C</p>
+
+      <div class="details">
+        <article class="detail">
+          <span class="detail-icon">💧</span>
+          <div><p class="muted">Humidity</p><strong id="humidity">--%</strong></div>
+        </article>
+        <article class="detail">
+          <span class="detail-icon">💨</span>
+          <div><p class="muted">Wind speed</p><strong id="wind">-- km/h</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <footer>Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></footer>
+  </main>
+</body>
+</html>
